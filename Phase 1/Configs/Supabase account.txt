@@ -1,0 +1,24 @@
+Supabase account:
+6musketeersproject@gmail.com
+Q2@xL9#vT7!mP4$kR8%
+-------------------------------
+VPS 94.20.88.231
+root
+*>)-Ip52$m1u
+-------------------------------
+6musketeersproject@gmail.com
+Qazwsxedc^6
+-------------------------------
+1. Student Test Account
+Email: testuser123@example.com
+Username: testuser123
+Password: Password123!
+Role: STUDENT
+2. Admin Test Account
+Email: superadmin@itshnix.com
+Username: superadminitshnix
+Password: Password123!
+Role: SUPER_ADMIN
+-------------------------------
+20904442827003079984254364154488293006489414127848
+pritunl://94.20.88.216/ku/ENc6R2qJ

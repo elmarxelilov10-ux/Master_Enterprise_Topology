@@ -1,0 +1,145 @@
+CORE-SW-02#sh run
+Building configuration...
+
+Current configuration : 2359 bytes
+!
+! Last configuration change at 08:46:38 UTC Sat Aug 15 2026 by admin
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service compress-config
+!
+hostname CORE-SW-02
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$m8nZ$Hmw9naMYTYkFcmJvG2DS3/
+!
+username admin secret 5 $1$6BX0$bTnssF1es.VM20fc8FgdD0
+no aaa new-model
+!
+!         
+!
+!
+!
+ip arp inspection vlan 3-5
+!
+!
+!
+ip dhcp snooping vlan 3-5
+ip dhcp snooping
+no ip domain-lookup
+ip domain-name lab.domain.com
+ip cef
+no ipv6 cef
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree portfast edge default
+spanning-tree extend system-id
+!
+no cdp run
+!
+!         
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.10.1.8 255.255.255.255
+!
+interface Ethernet0/0
+ switchport trunk allowed vlan 3-5
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 111
+ switchport mode trunk
+ ip arp inspection trust
+!
+interface Ethernet0/1
+ switchport trunk allowed vlan 3-5
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 111
+ switchport mode trunk
+ ip arp inspection trust
+ ip dhcp snooping trust
+!
+interface Ethernet0/2
+ switchport access vlan 99
+ switchport mode access
+ shutdown
+!
+interface Ethernet0/3
+ switchport trunk allowed vlan 3
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 111
+ switchport mode trunk
+ ip arp inspection trust
+ ip dhcp snooping trust
+!
+interface Ethernet1/0
+ switchport trunk allowed vlan 4,5
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 111
+ switchport mode trunk
+!
+interface Ethernet1/1
+ switchport access vlan 99
+ switchport mode access
+ shutdown
+!
+interface Ethernet1/2
+ switchport access vlan 99
+ switchport mode access
+ shutdown
+!
+interface Ethernet1/3
+ switchport access vlan 99
+ switchport mode access
+ shutdown
+!
+ip forward-protocol nd
+!
+no ip http server
+!
+ip ssh time-out 60
+ip ssh authentication-retries 5
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+ip access-list extended SSH1
+ permit tcp 192.168.5.0 0.0.0.255 host 10.10.1.8 eq 22
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 5 0
+ logging synchronous
+ login local
+line aux 0
+line vty 0 4
+ access-class SSH1 in
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+!
+!
+end
