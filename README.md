@@ -12,3 +12,8 @@ I am building this master topology because i realized that in real life engineer
  * Vlans can reach each other through subinterfeces of Palo
  * Loopback of devices
  * Out of Band management
+## Phase 2 Basic Internal security
+* configuring HA on both PaloAlto FWs. HA need two links one for control and other for data (sync configs).
+* Configured DMZ zone interface on PaloAlto and also configured IP of ubuntu which will serve as public server in future.
+* Did device hardening with my prewritten switch hardening file + L2 security
+* and lastly configured ACL for ssh so only IT vlan can ssh devices.
