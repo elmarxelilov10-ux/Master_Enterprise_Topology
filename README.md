@@ -17,3 +17,7 @@ I am building this master topology because i realized that in real life engineer
 * Configured DMZ zone interface on PaloAlto and also configured IP of ubuntu which will serve as public server in future.
 * Did device hardening with my prewritten switch hardening file + L2 security
 * and lastly configured ACL for ssh so only IT vlan can ssh devices.
+## Phase 3 Outside Connectivity
+* Configured eBGP with edge routers and ISP routers. AS 100 , AS 200 , AS 65000 .
+* Configured iBGP between edge routers. AS 6500 . Wasn't necessary but did it for practice.
+* Configured OSPF between FWs and edge routers.
