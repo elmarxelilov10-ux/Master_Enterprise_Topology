@@ -1,0 +1,138 @@
+BAKTELECOM-01#sh  run
+Building configuration...
+
+Current configuration : 1362 bytes
+!
+! Last configuration change at 12:41:58 UTC Wed Aug 19 2026
+!
+version 15.7
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname BAKTELECOM-01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!         
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+no ip domain lookup
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!         
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.10.1.2 255.255.255.255
+!
+interface Ethernet0/0
+ ip address 100.2.200.0 255.255.255.254
+ duplex auto
+!
+interface Ethernet0/1
+ ip address dhcp
+ duplex auto
+!
+interface Ethernet0/2
+ no ip address
+ shutdown
+ duplex auto
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+ duplex auto
+!
+router bgp 200
+ bgp log-neighbor-changes
+ neighbor 10.10.1.4 remote-as 65000
+ neighbor 10.10.1.4 ebgp-multihop 3
+ neighbor 10.10.1.4 update-source Loopback0
+ neighbor 10.10.1.4 default-originate
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip route 10.10.1.4 255.255.255.255 100.2.200.1
+!
+ipv6 ioam timestamp
+!
+!
+!
+control-plane
+!         
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+ntp server 34.202.215.187
+ntp server pool.ntp.org
+!
+end
