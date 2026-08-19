@@ -21,3 +21,4 @@ I am building this master topology because i realized that in real life engineer
 * Configured eBGP with edge routers and ISP routers. AS 100 , AS 200 , AS 65000 .
 * Configured iBGP between edge routers. AS 6500 . Wasn't necessary but did it for practice.
 * Configured OSPF between FWs and edge routers.
+* Used Loopback interfaces for all peerings . BGP made a problem and fixed by update source . And in eBGP i changed ttl to 3 because of loopbacks.
