@@ -22,3 +22,9 @@ I am building this master topology because i realized that in real life engineer
 * Configured iBGP between edge routers. AS 6500 . Wasn't necessary but did it for practice.
 * Configured OSPF between FWs and edge routers.
 * Used Loopback interfaces for all peerings . BGP made a problem and fixed by update source . And in eBGP i changed ttl to 3 because of loopbacks.
+## Phase 4 NSE4 lesson 1-2
+* Configured inital configs on both Fortigates
+* DHCP server in port1
+* ip helper-address in OOB router
+* created two VPN profiles 1 for full access other only read
+* AND lastly logs in fortigate can be stored in two ways local and remote . Logs may be stored raw (archiving) and in SQL database (for analysis). Logs may be divided into 3 categories Traffic Logs (Data plane) ,Event Logs (Management and system Plane) and Security Logs.
