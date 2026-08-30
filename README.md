@@ -28,3 +28,10 @@ I am building this master topology because i realized that in real life engineer
 * ip helper-address in OOB router
 * created two VPN profiles 1 for full access other only read
 * AND lastly logs in fortigate can be stored in two ways local and remote . Logs may be stored raw (archiving) and in SQL database (for analysis). Logs may be divided into 3 categories Traffic Logs (Data plane) ,Event Logs (Management and system Plane) and Security Logs.
+## Phase 5 NSE4 lesson 3-4
+*FortiGate Policies: Configured test policies to practice them.
+ *Policy NATs : in OBB-FrotiG-01 i used policy NATs to configure NAT individually for each policy.
+ *CNAT : in OBB-FrotiG-02 i used central NAT to centralize the NAT processes.
+ *Features enabling : enabled multiple interfaces and unnamed policies features.
+ *Security Profiles : enabled security profiles in policies to study them.
+
