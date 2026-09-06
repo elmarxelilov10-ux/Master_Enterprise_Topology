@@ -34,4 +34,7 @@ I am building this master topology because i realized that in real life engineer
  *CNAT : in OBB-FrotiG-02 i used central NAT to centralize the NAT processes.
  *Features enabling : enabled multiple interfaces and unnamed policies features.
  *Security Profiles : enabled security profiles in policies to study them.
+ ## Phase 6 NSE4 lesson 5-6
+ * Configure password authentications
+ * Configured FSSO
 
