@@ -37,4 +37,12 @@ I am building this master topology because i realized that in real life engineer
  ## Phase 6 NSE4 lesson 5-6
  * Configure password authentications
  * Configured FSSO
+## Phase 7 NSE4 lesson 7-8
+* Security Profiles : Antivirus default profile used in policies.
+* Deep SSL/SSH inspection used in policies.
+* Used only SSL/SSH inspection and Decrypted Traffic Mirror to forward decrypted traffic to IDS server to analyze.
+* Added the fortinet's certificate to browser to trust it.
+* Configured uncompressed-oversize-limit and uncompressed-nest-limit. ( to prevent zip-bomb attacks)
+* Exempted some categories and web addresses to prevent certificate pinning and legal compliances.
+* Enabled Comfort Clients option to prevent confusing for clients.
 
