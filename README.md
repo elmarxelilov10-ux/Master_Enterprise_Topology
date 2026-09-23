@@ -45,4 +45,10 @@ I am building this master topology because i realized that in real life engineer
 * Configured uncompressed-oversize-limit and uncompressed-nest-limit. ( to prevent zip-bomb attacks)
 * Exempted some categories and web addresses to prevent certificate pinning and legal compliances.
 * Enabled Comfort Clients option to prevent confusing for clients.
+## Phase 8 NSE4 IPSEC
+* Practiced different scenarios with IPSEC.
+* Configured IPsec Site to site .
+* Configured IPsec remote access .
+* Configured IPsec with dial up peers .
+* Also integrated VTI of IPsec to OSPF.
 
