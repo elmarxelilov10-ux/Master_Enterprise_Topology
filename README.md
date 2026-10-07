@@ -51,4 +51,8 @@ I am building this master topology because i realized that in real life engineer
 * Configured IPsec remote access .
 * Configured IPsec with dial up peers .
 * Also integrated VTI of IPsec to OSPF.
+## Phase 9 NSE4 HA
+* Practiced HA configuration
+* 1 heartbeat interface
+* 1 monitored interface
 
